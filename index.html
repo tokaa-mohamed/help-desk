@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <h2 id="title">Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <select id="role" style="display:none; width: 95%; padding: 10px;">
+            <option value="employee">Employee</option>
+            <option value="agent">Agent</option>
+            <option value="manager">Manager</option>
+        </select>
+        <button onclick="handleAuth()" id="authBtn">Login</button>
+        <p onclick="toggleAuth()" style="cursor:pointer; color:#64ffda;">Switch to Sign Up</p>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>

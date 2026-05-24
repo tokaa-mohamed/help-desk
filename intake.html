@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <a href="intake.html">Intake</a>  <a href="queue.html">Queue</a> <a href="dashboard.html">Dashboard</a>  <a href="#" class="logout-btn" onclick="logout()">Logout</a>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h1>Create New Ticket</h1>
+            <input type="text" id="ticketTitle" placeholder="عنوان المشكلة">
+
+            <textarea id="ticketDesc" placeholder="وصف المشكلة بالتفصيل..."></textarea>
+        <select id="department" style="width: 100%; padding: 12px; margin: 10px 0; border-radius: 8px; background: rgba(255,255,255,0.1); color: white; border: none;">
+        <option value="Technical">Technical</option>
+        <option value="Finance">Finance</option>
+        <option value="HR">HR</option>
+    </select>
+            <button onclick="submitTicket()">Submit Ticket</button>
+        </div>
+
+        <div class="card" style="width: 80%; max-width: 800px;">
+            <h1>My Tickets</h1>
+            <table id="my-table">
+                <tr><th>Title</th><th>Status</th></tr>
+            </table>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => loadTickets('my-table', false));
+</script>
+</body>
+</html>
